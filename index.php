@@ -2,9 +2,9 @@
 			<?php
 				$loop = new WP_Query(array(
 					"post_type" => "songtitle",
-					"post_per_page" => -1,
+					"numberposts" => -1,
 					"orderby" => "title",
-					"order" => "DESC"
+					"order" => "ASC"
 					));
 				if($loop->have_posts()):
 			?>

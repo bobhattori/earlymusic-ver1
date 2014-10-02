@@ -2,7 +2,7 @@
 	<nav class="mod article_list">
 		<ul>
 			<?php
-				$posts = get_posts("post_type=songtitle&numberposts=100");
+				$posts = get_posts("post_type=songtitle&numberposts=100&orderby=title&order=asc");
 				foreach($posts as $post):
 			?>
 			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -12,7 +12,7 @@
 	<nav class="mod article_list">
 		<ul>
 			<?php
-				$posts = get_posts("post_type=songtitle&numberposts=100&offset=100");
+				$posts = get_posts("post_type=songtitle&numberposts=100&offset=100&orderby=title&order=asc");
 				foreach($posts as $post):
 			?>
 			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -22,7 +22,7 @@
 	<nav class="mod article_list">
 		<ul>
 			<?php
-				$posts = get_posts("post_type=songtitle&numberposts=100&offset=200");
+				$posts = get_posts("post_type=songtitle&numberposts=100&offset=200&orderby=title&order=asc");
 				foreach($posts as $post):
 			?>
 			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
@@ -32,7 +32,7 @@
 	<nav class="mod article_list">
 		<ul>
 			<?php
-				$posts = get_posts("post_type=songtitle&numberposts=100&offset=300");
+				$posts = get_posts("post_type=songtitle&numberposts=100&offset=300&orderby=title&order=asc");
 				foreach($posts as $post):
 			?>
 			<li><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></li>
