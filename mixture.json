@@ -6,8 +6,8 @@
     ],
     "preprocessorScriptOutput": "assets/js/vendor",
     "preprocessorStyleOutput": "assets/css",
-    "projectName": "Project Name",
-    "projectDescription": "Project Description",
+    "projectName": "early music ver.01",
+    "projectDescription": "",
     "publishedId": null,
     "serverHostname": null,
     "serverPort": null,
@@ -39,7 +39,9 @@
     ],
     "customTodos": null,
     "autoPrefixer": null,
-    "sass": null,
+    "sass": {
+        "useLibSass": true
+        },
     "sitemap": false,
     "less": null,
     "optimiseSVG": true,
