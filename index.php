@@ -13,7 +13,6 @@
 					<caption>songtitle</caption>
 					<thead>
 						<tr>
-							<th>song number</th>
 							<th>song title</th>
 							<th>album</th>
 							<th>jacket</th>
@@ -22,10 +21,8 @@
 					<tbody>
 					<?php
 						while($loop->have_posts()): $loop->the_post();
-						$mn = get_field('music_number');
 					?>
 						<tr>
-							<td><?php if($mn): ?><?php echo $mn ?><?php else: ?>&nbsp;<?php endif; ?></td>
 							<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 		          <?php // album
 		            $args = array(

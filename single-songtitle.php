@@ -15,20 +15,35 @@
 		      <?php // album
 		        $args = array(
 		          'connected_type' => 'cds_to_songtitle',
-		          'connected_items' => $post,
+		          'connected_items' => get_queried_object(),
 		          'nopaging' => true,
-		          'suppress_filters' => false,
+		          'connected_meta' => 'songNum'
 		        );
-		        $connected_posts = get_posts($args);
-		        foreach($connected_posts as $post):
+		        $connected = new WP_Query($args);
+		        while($connected->have_posts()):
+		        	$connected->the_post();
 		          setup_postdata($post);
 		          $jacket = get_field('jacket');
+		          $player = get_field('player');
+		          $year = get_field('release');
+		          $sn = p2p_get_meta( get_post()->p2p_id, 'songNum', true );
+		          $sn = (int)$sn;
 		      ?>
-		      <figure>
-		      	<img src="<?php echo $jacket ?>" alt="<?php the_title(); ?>">
-		      </figure>
-		      <div class="cdttl"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-		    	<?php endforeach; wp_reset_postdata(); ?>
+		      <section class="recorded">
+		      	<a href="<?php the_permalink(); ?>">
+				      <figure>
+				      	<img src="<?php echo $jacket ?>" alt="<?php the_title(); ?>">
+				      </figure>
+				      <h4 class="cdttl"><?php the_title(); ?></h4>
+				      <div class="meta">
+				      	<p class="player"><?php echo $player ?></p>
+				      	<p class="year"><?php echo $year ?></p>
+				      	<p class="songNum"><?php echo $sn ?>曲目</p>
+				      </div>
+						</a>
+		      </section>
+			    <?php endwhile; wp_reset_postdata(); ?>
+			      	
 				</section>
 			</section>
 <?php get_footer(); ?>

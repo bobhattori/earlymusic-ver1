@@ -8,3 +8,38 @@
 @import "foundation";
 
 body{}
+
+header{
+	@include grid-row();
+	hgroup{
+		@include grid-column(12);
+	}
+}
+
+.container{
+	@include grid-row();
+	.content{
+		@include grid-column(
+				$columns: 9,
+				$float: right
+			);
+	}
+	.sidebar{
+		@include grid-column(3);
+		.article_list{
+			ul{
+				li{
+					display: inline-block;
+					a{
+						font-size: rem-calc(13);
+						padding: 2px 4px;
+						background-color: #eee;
+						&:hover{
+							background-color: #ddd;
+						}
+					}
+				}
+			}
+		}
+	}
+}

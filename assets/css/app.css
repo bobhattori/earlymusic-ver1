@@ -4893,3 +4893,51 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+header {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem; }
+  header:before, header:after {
+    content: " ";
+    display: table; }
+  header:after {
+    clear: both; }
+  header hgroup {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem; }
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+  .container .content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 75%;
+    float: right; }
+  .container .sidebar {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 25%;
+    float: left; }
+    .container .sidebar .article_list ul li {
+      display: inline-block; }
+      .container .sidebar .article_list ul li a {
+        font-size: 0.8125rem;
+        padding: 2px 4px;
+        background-color: #eee; }
+        .container .sidebar .article_list ul li a:hover {
+          background-color: #ddd; }
