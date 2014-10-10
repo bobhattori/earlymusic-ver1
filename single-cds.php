@@ -13,12 +13,16 @@
 				</article>
 				<?php if(get_field('songs')): ?>
 				<section class="descendant">
-					<ol>
+					<ul>
 					<?php while(the_repeater_field('songs')): ?>
-						<li>
+						<li><span class="track_num"><?php the_sub_field('track_num'); ?>.</span>
+							<?php if(get_sub_field('link')): ?>
 							<a href="<?php the_sub_field('link'); ?>">
 								<?php the_sub_field('song_title'); ?>
 							</a>
+							<?php else: ?>
+							<?php the_sub_field('song_title'); ?>
+							<?php endif; ?>
 							<?php if(get_sub_field('music_number')): ?>（<?php the_sub_field('music_number'); ?>）<?php endif; ?>
 						</li>
 					<?php endwhile; ?>

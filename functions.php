@@ -10,7 +10,15 @@ function my_connection_types() {
             'sortable' => 'any',
             'fields' => array(
                 'songNum' => array(
-                    'title' => 'song number',
+                    'title' => 'track num1',
+                    'type' => 'text',
+                ),
+                'songNum2' => array(
+                    'title' => 'track num2',
+                    'type' => 'text',
+                ),
+                'songNum3' => array(
+                    'title' => 'track num3',
                     'type' => 'text',
                 ),
             )
@@ -18,4 +26,5 @@ function my_connection_types() {
     );
 }
 add_action( 'p2p_init', 'my_connection_types' );
+
 ?>

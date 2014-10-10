@@ -18,7 +18,7 @@
 			if($post_count % 100 == 1 && $post_count != 1){
 				echo "</ul>" . "\n" . "<ul>" . "\n";
 			} ?>
-		<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+		<li><a href="<?php the_permalink(); ?>"><?php if(mb_strlen($post->post_title)>20) { $title= mb_substr($post->post_title,0,20) ; echo $title. ･･･ ; } else {echo $post->post_title;}?></a></li>
 		<?php $post_count++; ?>
 		<?php endforeach;
 			echo "</ul>" . "\n";
