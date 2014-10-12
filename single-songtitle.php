@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 			<?php the_post(); ?>
-			<?php $mn = get_field('music_number'); ?>
+			<?php 
+				$mn = get_field('music_number');
+				$score = get_field('to_score');
+			?>
 			<section class="post">
 				<header class="post_head">
 					<hgroup>
@@ -27,7 +30,6 @@
 		          $jacket = get_field('jacket');
 		          $player = get_field('player');
 		          $year = get_field('release');
-		          $score = get_field('to_score');
 		          $sn = p2p_get_meta( get_post()->p2p_id, 'songNum', true );
 		          $sn = (int)$sn;
 		          $sn2 = p2p_get_meta( get_post()->p2p_id, 'songNum2', true );
@@ -50,6 +52,35 @@
 						</a>
 		      </section>
 			    <?php endwhile; wp_reset_postdata(); ?>
+
+			    <?php if(get_field('recorded')): ?>
+			    <?php while(the_repeater_field('recorded')): ?>
+			    <section class="recorded">
+			    	<?php if(get_sub_field('ce_link')): ?>
+			    	<a href="<?php the_sub_field('cd_link'); ?>">
+			    		<figure>
+			    			<img src="<?php the_sug_field('cd_jacket'); ?>" alt="">
+			    		</figure>
+							<h4><?php the_sub_field('cd_title') ?></h4>
+							<div class="meta">
+								<p class="player"><?php the_sub_field('player') ?></p>
+								<p class="sonNum"><?php the_sub_field('song_num') ?></p>
+							</div>
+			    	</a>
+			    	<?php else: ?>
+			    	<figure>
+			    		<img src="<?php the_sug_field('cd_jacket'); ?>" alt="">
+			   		</figure>
+						<h4><?php the_sub_field('cd_title') ?></h4>
+						<div class="meta">
+							<p class="player"><?php the_sub_field('player') ?></p>
+							<p class="sonNum"><?php the_sub_field('song_num') ?></p>
+						</div>
+						<?php endif; ?>
+
+			    </section>
+			  	<?php endwhile; wp_reset_postdata(); ?>
+			  	<?php endif; ?>
 				</section>
 
 				<section class="score">

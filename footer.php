@@ -1,5 +1,7 @@
 		</section>
+		<?php if(!is_home()){ ?>
 		<?php get_template_part('sidebar'); ?>
+		<?php } ?>
 	</section>
 	<hr class="devider">
 	<footer>

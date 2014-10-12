@@ -5,7 +5,6 @@
 	<title>earlymusic database</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/icons/css/font-awesome.css" rel="stylesheet">
   <link href="<?php echo get_template_directory_uri(); ?>/assets/css/app.css" rel="stylesheet">
 
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> RSS Feed" href="<?php echo get_bloginfo('rss2_url'); ?>" />
@@ -31,4 +30,4 @@
 	</header>
 	<hr class="devider">
 	<section class="container">
-		<section class="content">
+		<section class="content<?php if(is_home()): ?> home_content<?php endif; ?>">

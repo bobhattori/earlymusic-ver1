@@ -4927,6 +4927,11 @@ header {
     display: table; }
   .container:after {
     clear: both; }
+  .container .home_content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
   .container .content {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -4965,12 +4970,16 @@ header {
     padding-right: 0.9375rem;
     width: 25%;
     float: left; }
-    .container .sidebar .article_list ul {
-      list-style-type: none;
-      margin: 0 0 1.5em;
-      padding: 0; }
-      .container .sidebar .article_list ul li a {
-        font-size: 0.8125rem;
-        padding: 2px 4px; }
-        .container .sidebar .article_list ul li a:hover {
-          background-color: #ddd; }
+    .container .sidebar .article_list {
+      position: relative; }
+      .container .sidebar .article_list ul {
+        top: 0;
+        left: 0;
+        list-style-type: none;
+        margin: 0 0 1.5em;
+        padding: 0; }
+        .container .sidebar .article_list ul li a {
+          font-size: 0.8125rem;
+          padding: 2px 4px; }
+          .container .sidebar .article_list ul li a:hover {
+            background-color: #ddd; }
