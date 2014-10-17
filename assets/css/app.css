@@ -4935,17 +4935,78 @@ header {
   .container .content {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+    .container .content .post .parent .recorded:before, .container .content .post .parent .recorded:after {
+      content: " ";
+      display: table; }
+    .container .content .post .parent .recorded:after {
+      clear: both; }
+    .container .content .post .parent .recorded figure {
+      float: left;
+      margin: 0 0.8em 0 0; }
+      .container .content .post .parent .recorded figure img {
+        width: 80px;
+        height: auto; }
+  .container .sidebar {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; }
+    .container .sidebar .article_list ul {
+      display: none; }
+
+.songlist table {
+  border-collapse: collapse; }
+  .songlist table th, .songlist table td {
+    border: 1px solid #aaa;
+    padding: 5px 12px; }
+  .songlist table tr:nth-of-type(2n) {
+    background-color: transparent; }
+  .songlist table caption {
+    padding-bottom: 0.5em;
+    text-align: left;
+    font-size: 18px;
+    color: #555; }
+  .songlist table thead th {
+    border-bottom: 2px solid #aaa; }
+  .songlist table tbody td {
+    width: 50%; }
+    .songlist table tbody td .album {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px dotted #ccc;
+      line-height: 1; }
+      .songlist table tbody td .album:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none; }
+      .songlist table tbody td .album img {
+        width: 40px;
+        height: auto; }
+
+@media only screen and (min-width:64.063em) {
+  .container .content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
     width: 75%;
     float: left; }
     .container .content .post .descendant ul {
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      .container .content .post .descendant ul li .track_num {
-        width: 1.5em;
-        display: inline-block;
-        text-align: right;
-        margin-right: 0.2em; }
+      .container .content .post .descendant ul li {
+        text-indent: -2em;
+        margin-left: 1.7em; }
+        .container .content .post .descendant ul li .track_num {
+          width: 1.5em;
+          display: inline-block;
+          text-align: right;
+          margin-right: 0.2em; }
+        .container .content .post .descendant ul li .divider:before {
+          content: " /\A";
+          white-space: pre;
+          color: #333; }
     .container .content .post .parent .recorded {
       padding-bottom: 0.3em;
       border-bottom: 1px dotted #aaa;
@@ -4972,14 +5033,21 @@ header {
     float: left; }
     .container .sidebar .article_list {
       position: relative; }
+      .container .sidebar .article_list div {
+        margin-top: 0.5em; }
+        .container .sidebar .article_list div:first-of-type {
+          margin-top: 0; }
+        .container .sidebar .article_list div .fa {
+          color: #555;
+          margin-right: 0.3em; }
       .container .sidebar .article_list ul {
         top: 0;
         left: 0;
         list-style-type: none;
-        margin: 0 0 1.5em;
+        margin: 0.8em 0 1.5em 0.8em;
         padding: 0; }
         .container .sidebar .article_list ul li a {
           font-size: 0.8125rem;
           padding: 2px 4px; }
           .container .sidebar .article_list ul li a:hover {
-            background-color: #ddd; }
+            background-color: #ddd; } }

@@ -29,37 +29,29 @@
 				<article class="textbody">
 					<?php the_content(); ?>
 				</article>
-				<?php if(get_field('songs')): ?>
-				<section class="descendant">
-					<ul>
-					<?php while(the_repeater_field('songs')): ?>
-						<li><span class="track_num"><?php the_sub_field('track_num'); ?>.</span>
-							<?php if(get_sub_field('link')): ?>
-							<a href="<?php the_sub_field('link'); ?>">
-								<?php the_sub_field('song_title'); ?>
-							</a>
-							<?php else: ?>
-							<?php the_sub_field('song_title'); ?>
-							<?php endif; ?>
-							<?php if(get_sub_field('music_number')): ?>（<?php the_sub_field('music_number'); ?>）<?php endif; ?>
-						</li>
-					<?php endwhile; ?>
-					</ol>
-				</section>
-				<?php endif; ?>
 
 				<?php if(get_field('songs')): ?>
 				<section class="descendant">
 					<ul>
 					<?php while(the_repeater_field('songs')): ?>
 						<li><span class="track_num"><?php the_sub_field('track_num'); ?>.</span>
-							<?php while(the_repeater_field('track_title')): ?>
+							<?php
+								$counter = 0;
+								while(the_repeater_field('track_title')):
+								$counter++
+							?>
+							<?php if($counter >= 2):
+								$class = 'class="divider"';
+							else:
+								$class = '';
+							endif;
+							?>
 								<?php if(get_sub_field('songLink')): ?>
-								<a href="<?php the_sub_field('songLink'); ?>">
+								<a href="<?php the_sub_field('songLink'); ?>" <?php echo $class ?>>
 									<?php the_sub_field('songTitle'); ?>
 								</a>
 								<?php else: ?>
-								<?php the_sub_field('songTitle'); ?>
+								<span <?php echo $class ?>><?php the_sub_field('songTitle'); ?></span>
 								<?php endif; ?>
 							<?php endwhile; ?>
 						</li>

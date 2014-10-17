@@ -21,6 +21,10 @@ function my_connection_types() {
                     'title' => 'track num3',
                     'type' => 'text',
                 ),
+                'caps' => array(
+                    'title' => 'caption',
+                    'type' => 'text',
+                ),
             )
         )
     );

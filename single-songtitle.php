@@ -36,7 +36,7 @@
 		          $sn2 = (int)$sn2;
 		          $sn3 = p2p_get_meta( get_post()->p2p_id, 'songNum3', true );
 		          $sn3 = (int)$sn3;
-		           
+		          $cap = p2p_get_meta( get_post()->p2p_id, 'caps', true);
 		      ?>
 		      <section class="recorded">
 		      	<a href="<?php the_permalink(); ?>">
@@ -47,7 +47,7 @@
 				      <div class="meta">
 				      	<p class="player"><?php echo $player ?></p>
 				      	<!--<p class="year"><?php echo $year ?></p>-->
-				      	<p class="songNum"><?php echo $sn ?>曲目<?php if($sn2): ?>、<?php echo $sn2 ?>曲目<?php endif; ?><?php if($sn3): ?>、<?php echo $sn3 ?>曲目<?php endif; ?></p>
+				      	<p class="songNum"><?php echo $sn ?>曲目<?php if($sn2): ?>、<?php echo $sn2 ?>曲目<?php endif; ?><?php if($sn3): ?>、<?php echo $sn3 ?>曲目<?php endif; ?><?php if($cap): ?><?php echo $cap ?><?php endif; ?></p>
 				      </div>
 						</a>
 		      </section>
