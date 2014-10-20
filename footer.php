@@ -4,7 +4,7 @@
 		<?php } ?>
 	</section>
 	<hr class="devider">
-	<footer>
+	<footer class="row">
 		<address>&copy; <?php the_time('Y'); ?> <?php echo get_bloginfo('name'); ?></address>
 	</footer>
 </section>
@@ -19,6 +19,7 @@ $(document).foundation();
 </script>
 
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/jquery.tablesorter.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/jquery.heightline.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
 </body>
 </html>

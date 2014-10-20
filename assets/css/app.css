@@ -4909,7 +4909,8 @@ header {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 100%;
-    float: left; }
+    float: left;
+    padding-top: 1.5em; }
     header hgroup .logo {
       font-size: 24px; }
     header hgroup h2 {
@@ -4948,6 +4949,32 @@ header {
       .container .content .post .parent .recorded figure img {
         width: 80px;
         height: auto; }
+    .container .content .post .descendant ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      .container .content .post .descendant ul li {
+        text-indent: -2em;
+        margin-left: 1.7em; }
+        .container .content .post .descendant ul li .track_num {
+          width: 1.5em;
+          display: inline-block;
+          text-align: right;
+          margin-right: 0.2em; }
+        .container .content .post .descendant ul li .divider:before {
+          content: " /\A";
+          white-space: pre;
+          color: #333; }
+    .container .content .cdlist .cd_item {
+      border-bottom: 1px dotted #ddd;
+      border-right: 1px dotted #ddd;
+      padding: 1em 0.8em 1em 0.8em; }
+      .container .content .cdlist .cd_item:nth-of-type(4n) {
+        border-right: none; }
+      .container .content .cdlist .cd_item a {
+        display: block; }
+      .container .content .cdlist .cd_item h4 {
+        font-size: 13px; }
   .container .sidebar {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -4991,22 +5018,6 @@ header {
     padding-right: 0.9375rem;
     width: 75%;
     float: left; }
-    .container .content .post .descendant ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      .container .content .post .descendant ul li {
-        text-indent: -2em;
-        margin-left: 1.7em; }
-        .container .content .post .descendant ul li .track_num {
-          width: 1.5em;
-          display: inline-block;
-          text-align: right;
-          margin-right: 0.2em; }
-        .container .content .post .descendant ul li .divider:before {
-          content: " /\A";
-          white-space: pre;
-          color: #333; }
     .container .content .post .parent .recorded {
       padding-bottom: 0.3em;
       border-bottom: 1px dotted #aaa;
@@ -5051,3 +5062,7 @@ header {
           padding: 2px 4px; }
           .container .sidebar .article_list ul li a:hover {
             background-color: #ddd; } }
+
+footer address {
+  font-size: 11px;
+  text-align: right; }

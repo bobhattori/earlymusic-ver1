@@ -13,6 +13,7 @@ header{
 	@include grid-row();
 	hgroup{
 		@include grid-column(12);
+		padding-top: 1.5em;
 		.logo{
 			font-size: 24px;
 		}
@@ -41,6 +42,46 @@ header{
 							height: auto;
 						}
 					}
+				}
+			}
+			.descendant{
+				ul{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					li{
+						text-indent: -2em;
+						margin-left: 1.7em;
+						.track_num{
+							width: 1.5em;
+							display: inline-block;
+							text-align: right;
+							margin-right: .2em;
+						}
+						.divider{
+							&:before{
+								content: " /\A";
+								white-space: pre;
+								color: #333;
+							}
+						}
+					}
+				}
+			}
+		}
+		.cdlist{
+			.cd_item{
+				border-bottom: 1px dotted #ddd;
+				border-right: 1px dotted #ddd;
+					padding: 1em .8em 1em .8em;
+				&:nth-of-type(4n){
+					border-right: none;
+				}
+				a{
+					display: block;
+				}
+				h4{
+					font-size: 13px;
 				}
 			}
 		}
@@ -106,30 +147,6 @@ header{
 		.content{
 			@include grid-column(9);
 			.post{
-				.descendant{
-					ul{
-						list-style-type: none;
-						margin: 0;
-						padding: 0;
-						li{
-							text-indent: -2em;
-							margin-left: 1.7em;
-							.track_num{
-								width: 1.5em;
-								display: inline-block;
-								text-align: right;
-								margin-right: .2em;
-							}
-							.divider{
-								&:before{
-									content: " /\A";
-									white-space: pre;
-									color: #333;
-								}
-							}
-						}
-					}
-				}
 				.parent{
 					.recorded{
 						@include clearfix;
@@ -185,5 +202,12 @@ header{
 				}
 			}
 		}
+	}
+}
+
+footer{
+	address{
+		font-size: 11px;
+		text-align: right;
 	}
 }

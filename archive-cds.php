@@ -15,7 +15,7 @@
 						$img = get_field('jacket');
 					?>
 
-					<section class="cd_item large-3 columns">
+					<section class="cd_item large-3 columns end">
 						<a href="<?php the_permalink(); ?>">
 							<figure><img src="<?php echo $img ?>" alt="<?php the_title(); ?>"></figure>
 							<h4><?php if(mb_strlen($post->post_title)>20) { $title= mb_substr($post->post_title,0,20) ; echo $title. ･･･ ; } else {echo $post->post_title;}?></h4>

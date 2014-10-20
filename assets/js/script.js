@@ -11,4 +11,9 @@ $(document).ready(function(){
 		$("i", this).toggleClass('fa-minus');
 		$("i", this).toggleClass('fa-plus');
 	});
+
 });
+
+$(window).load(function(){
+	$(".cdlist>section").heightLine();	
+})
