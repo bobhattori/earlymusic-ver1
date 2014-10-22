@@ -13,12 +13,14 @@
 					<?php
 						while($loop->have_posts()): $loop->the_post();
 						$img = get_field('jacket');
+						$note = get_field('note');
 					?>
 
-					<section class="cd_item large-3 columns end">
+					<section class="cd_item large-6 columns end">
 						<a href="<?php the_permalink(); ?>">
 							<figure><img src="<?php echo $img ?>" alt="<?php the_title(); ?>"></figure>
-							<h4><?php if(mb_strlen($post->post_title)>20) { $title= mb_substr($post->post_title,0,20) ; echo $title. ･･･ ; } else {echo $post->post_title;}?></h4>
+							<h4><?php if(mb_strlen($post->post_title)>32) { $title= mb_substr($post->post_title,0,32) ; echo $title. ･･･ ; } else {echo $post->post_title;}?></h4>
+							<?php if($note): ?><p class="note"><?php echo $note ?></p><?php endif; ?>
 						</a>
 					</section>
 

@@ -73,15 +73,16 @@ header{
 			.cd_item{
 				border-bottom: 1px dotted #ddd;
 				border-right: 1px dotted #ddd;
-					padding: 1em .8em 1em .8em;
-				&:nth-of-type(4n){
+				padding: 1em .8em 1em .8em;
+				&:nth-of-type(2n){
 					border-right: none;
 				}
 				a{
 					display: block;
+					text-align: center;
 				}
 				h4{
-					font-size: 13px;
+					font-size: 15px;
 				}
 			}
 		}

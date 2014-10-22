@@ -4969,12 +4969,13 @@ header {
       border-bottom: 1px dotted #ddd;
       border-right: 1px dotted #ddd;
       padding: 1em 0.8em 1em 0.8em; }
-      .container .content .cdlist .cd_item:nth-of-type(4n) {
+      .container .content .cdlist .cd_item:nth-of-type(2n) {
         border-right: none; }
       .container .content .cdlist .cd_item a {
-        display: block; }
+        display: block;
+        text-align: center; }
       .container .content .cdlist .cd_item h4 {
-        font-size: 13px; }
+        font-size: 15px; }
   .container .sidebar {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;

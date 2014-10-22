@@ -30,6 +30,7 @@
 		          $jacket = get_field('jacket');
 		          $player = get_field('player');
 		          $year = get_field('release');
+		          $note = get_field('note');
 		          $sn = p2p_get_meta( get_post()->p2p_id, 'songNum', true );
 		          $sn = (int)$sn;
 		          $sn2 = p2p_get_meta( get_post()->p2p_id, 'songNum2', true );
@@ -56,12 +57,13 @@
 			    <?php if(get_field('recorded')): ?>
 			    <?php while(the_repeater_field('recorded')): ?>
 			    <section class="recorded">
-			    	<?php if(get_sub_field('ce_link')): ?>
+			    	<?php if(get_sub_field('cd_link')): ?>
 			    	<a href="<?php the_sub_field('cd_link'); ?>">
 			    		<figure>
 			    			<img src="<?php the_sug_field('cd_jacket'); ?>" alt="">
 			    		</figure>
 							<h4><?php the_sub_field('cd_title') ?></h4>
+							<?php if($note): ?><p class="note"><?php echo $note ?></p><?php endif; ?>
 							<div class="meta">
 								<p class="player"><?php the_sub_field('player') ?></p>
 								<p class="sonNum"><?php the_sub_field('song_num') ?></p>

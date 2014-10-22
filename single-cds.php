@@ -5,14 +5,15 @@
 				$player = get_field('player');
 				$year = get_field('release');
 				$label = get_field('record_label');
-				$have = get_field('who_has');
 				$of_link = get_field('official');
+				$note = get_field('note');
 			?>
 			<section class="post">
 				<header class="post_head">
 					<hgroup>
 						<h1><?php the_title(); ?></h1>
 						<h2><?php echo $player ?></h2>
+						<?php if($note): ?><p><?php echo $note ?></p><?php endif; ?>
 					</hgroup>
 				</header>
 				<div class="cd_info">
@@ -21,8 +22,7 @@
 					<ul class="meta">
 						<li class="release"><?php echo $year ?></li>
 						<li class="record_label"><?php echo $label ?></li>
-						<li class="who_has"><?php echo $have ?></li>
-						<li class="official_link"><a href="<?php echo $of_link ?>" target="_blank"><?php echo $of_link ?></a></li>
+						<?php if($of_link): ?><li class="official_link"><a href="<?php echo $of_link ?>" target="_blank"><?php echo $of_link ?></a></li><?php endif; ?>
 					</ul>
 					<?php endif; ?>
 				</div>
