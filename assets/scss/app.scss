@@ -7,6 +7,7 @@
 // You can import only specific elements by adjusting the import below
 @import "foundation";
 
+
 body{}
 
 header{
@@ -23,6 +24,12 @@ header{
 	}
 }
 
+.btn{
+	padding: 12px 18px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+
 .container{
 	@include grid-row();
 	.home_content{
@@ -31,6 +38,45 @@ header{
 	.content{
 		@include grid-column(12);
 		.post{
+			.post_head{
+				hgroup{
+					h1{
+						font-size: 32px;
+					}
+					h2{
+						font-size: 20px;
+					}
+					.note{
+						font-size: 13px;
+					}
+				}
+			}
+			.score{
+				text-align: right;
+				.toScore{
+					background-color: orange;
+					color: #fff;
+					&:hover{
+						background-color: darken(orange, 10%);
+						transition: .5s;
+					}
+				}
+			}
+			.cd_info{
+				margin-top: 2em;
+				@include clearfix;
+				figure{
+					float: left;
+					margin:0 15px 2em 0;
+					padding-right:15px;
+					border-right: 1px dotted #444;
+				}
+				.meta{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+			}
 			.parent{
 				.recorded{
 					@include clearfix;
@@ -45,6 +91,14 @@ header{
 				}
 			}
 			.descendant{
+				padding: 1em 0 2em;
+				border-top: 1px solid #444;
+				border-bottom: 1px solid #444;
+				h5{
+					font-weight: normal;
+					font-size: 16px;
+					margin-bottom: 1em;
+				}
 				ul{
 					list-style-type: none;
 					margin: 0;
@@ -74,7 +128,7 @@ header{
 				border-bottom: 1px dotted #ddd;
 				border-right: 1px dotted #ddd;
 				padding: 1em .8em 1em .8em;
-				&:nth-of-type(2n){
+				&:nth-of-type(3n){
 					border-right: none;
 				}
 				a{
@@ -83,6 +137,10 @@ header{
 				}
 				h4{
 					font-size: 15px;
+				}
+				.player{
+					font-size: 13px;
+					color: #555;
 				}
 			}
 		}

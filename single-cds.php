@@ -13,15 +13,15 @@
 					<hgroup>
 						<h1><?php the_title(); ?></h1>
 						<h2><?php echo $player ?></h2>
-						<?php if($note): ?><p><?php echo $note ?></p><?php endif; ?>
+						<?php if($note): ?><p class="note"><?php echo $note ?></p><?php endif; ?>
 					</hgroup>
 				</header>
 				<div class="cd_info">
 					<figure><img src="<?php echo $jacket ?>" alt="<?php the_title(); ?>"></figure>
 					<?php if($year or $label or $have or $of_link): ?>
 					<ul class="meta">
-						<li class="release"><?php echo $year ?></li>
-						<li class="record_label"><?php echo $label ?></li>
+						<li class="release">リリース年：<?php echo $year ?></li>
+						<li class="record_label">レーベル：<?php echo $label ?></li>
 						<?php if($of_link): ?><li class="official_link"><a href="<?php echo $of_link ?>" target="_blank"><?php echo $of_link ?></a></li><?php endif; ?>
 					</ul>
 					<?php endif; ?>
@@ -32,6 +32,7 @@
 
 				<?php if(get_field('songs')): ?>
 				<section class="descendant">
+					<h5>収録曲</h5>
 					<ul>
 					<?php while(the_repeater_field('songs')): ?>
 						<li><span class="track_num"><?php the_sub_field('track_num'); ?>.</span>

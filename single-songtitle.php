@@ -14,6 +14,11 @@
 				<article class="textbody">
 					<?php the_content(); ?>
 				</article>
+
+				<section class="score">
+					<a href="<?php echo $score ?>" class="btn tiny toScore" target="_blank">楽譜を見る</a>
+				</section>
+				
 				<section class="parent">
 					<h3>収録CD</h3>
 		      <?php // album
@@ -83,10 +88,6 @@
 			    </section>
 			  	<?php endwhile; wp_reset_postdata(); ?>
 			  	<?php endif; ?>
-				</section>
-
-				<section class="score">
-					<a href="<?php echo $score ?>" class="btn tiny toScore" target="_blank">楽譜を見る</a>
 				</section>
 			</section>
 <?php get_footer(); ?>
