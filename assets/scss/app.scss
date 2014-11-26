@@ -1,5 +1,8 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
+// Custom Functions
+
+
 
 // Global Foundation Settings
 @import "foundation/settings";
@@ -7,8 +10,15 @@
 // You can import only specific elements by adjusting the import below
 @import "foundation";
 
+body {
+	
+}
 
-body{}
+
+a{
+	text-decoration: none;
+}
+
 
 header{
 	@include grid-row();

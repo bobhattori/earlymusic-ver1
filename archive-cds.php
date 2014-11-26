@@ -17,7 +17,7 @@
 						$player = get_field('player');
 					?>
 
-					<section class="cd_item large-4 columns end">
+					<section class="small-4 columns end cd_item">
 						<a href="<?php the_permalink(); ?>">
 							<figure><img src="<?php echo $img ?>" alt="<?php the_title(); ?>"></figure>
 							<h4><?php if(mb_strlen($post->post_title)>25) { $title= mb_substr($post->post_title,0,25) ; echo $title. ･･･ ; } else {echo $post->post_title;}?></h4>

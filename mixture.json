@@ -1,50 +1,27 @@
 {
-    "debug": false,
-    "lintScripts": false,
-    "preprocessorLocations": [
-        "/"
-    ],
-    "preprocessorScriptOutput": "assets/js/vendor",
-    "preprocessorStyleOutput": "assets/css",
-    "projectName": "early music ver.01",
-    "projectDescription": "",
-    "publishedId": null,
-    "serverHostname": null,
-    "serverPort": null,
-    "templateDirectory": "templates",
-    "templateDefaultLayout": "layout",
-    "templateDefaultPage": "index",
-    "type": "simple",
-    "useCompass": false,
-    "simpleModePartnerServer": "wptest5.localhost",
-    "simpleModeFileTypes": null,
-    "modelSource": null,
-    "domain": null,
-    "convertHtml": {
-        "path": null,
-        "extension": ".html",
-        "ignoreUrls": null,
-        "relativePaths": false,
-        "default": null
-    },
-    "followLeader": true,
-    "routes": null,
-    "customRuby": false,
-    "customRubyPath": null,
-    "remoteDebugPort": 0,
-    "optimiseImages": true,
-    "password": null,
-    "ignoreDir": [
-        "node_modules"
-    ],
-    "customTodos": null,
-    "autoPrefixer": null,
-    "sass": {
-        "sourceMap": false,
-        "useLibSass": false
-        },
-    "sitemap": false,
-    "less": null,
-    "optimiseSVG": true,
-    "reload": 0
+  "convertHtml": {
+    "relativePaths": false
+  },
+  "customRubyPath": null,
+  "debug": false,
+  "domain": null,
+  "followLeader": false,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "/"
+  ],
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "My project description",
+  "projectName": "earlymusic_ver1",
+  "publishedId": null,
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": "wptest5.localhost",
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "simple",
+  "useCompass": false
 }
